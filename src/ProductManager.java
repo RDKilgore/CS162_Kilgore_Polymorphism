@@ -39,6 +39,6 @@ public class ProductManager extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + "\nVacation time: " + vacationTime() + " weeks" + ". Stock Options: " + stockOptions() + " shares";
+        return super.toString() + "Vacation time: " + vacationTime() + " weeks" + ". \nStock Options: " + stockOptions() + " shares\n";
     }
 }

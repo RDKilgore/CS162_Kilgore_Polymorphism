@@ -1,8 +1,3 @@
-/**
- * Employee.java - Employee Benefits Management
- * @author Your Name
- * @version 1
- */
 public class Employee {
     private String name;
     private double baseSalary;
@@ -76,8 +71,8 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee name: " + name +
-                ", baseSalary: $" + getBaseSalary() + " Position: " + staffedPosition +
-                "\nmotto: " + motto();
+                "\nbaseSalary: $" + getBaseSalary() + "\nPosition: " + staffedPosition +
+                "\nmotto: " + motto() ;
     }
 
     /**

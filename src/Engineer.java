@@ -45,6 +45,6 @@ public class Engineer extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + "\nVacation time: " + vacationTime() + " weeks" + ". Sign on bonus: $" + signOnBonus();
+        return super.toString() + "\nVacation time: " + vacationTime() + " weeks" + "\nSign on bonus: $" + signOnBonus() + "\n";
     }
 }

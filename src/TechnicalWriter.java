@@ -27,6 +27,6 @@ public class TechnicalWriter extends Employee{
 
     @Override
     public String toString() {
-        return super.toString()+ "\nVacation time: " + vacationTime() + " weeks" ;
+        return super.toString()+ "\nVacation time: " + vacationTime() + " weeks\n" ;
     }
 }

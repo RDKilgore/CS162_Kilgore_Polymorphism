@@ -1,5 +1,9 @@
 import java.util.ArrayList;
-
+/**
+ * Employee.java - Employee Benefits Management
+ * @author Rian
+ * @version 2
+ */
 public class Main {
     public static void main(String[] args) {
         Owner boss = new Owner();
@@ -9,7 +13,7 @@ public class Main {
         boss.addProductManger("June", 50000, 4, 2, "Product Manager");
         boss.giveRaise(Engineer.class, 0.25);
         boss.giveRaise(TechnicalWriter.class, 0.25);
-        boss.giveRaise(ProductManager.class, 0.25);
+        boss.giveRaise(ProductManager.class, .25);
         boss.viewAllEmployees();
     }
 }

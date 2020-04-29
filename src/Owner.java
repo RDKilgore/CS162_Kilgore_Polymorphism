@@ -10,16 +10,16 @@ public class Owner {
 
     public Owner() {
         name = "Rian";
-        availableForMeeting = false;
+        availableForMeeting = true;
         motto = "\"Do what you can\" - Me";
         System.out.println(toString());
     }
 
     public void giveRaise(Class<?> className , double percentRaise) {
-        for (Employee emp : companyX) {
-            if (emp.getClass() == className) {
-                this.raise = emp.getBaseSalary() * percentRaise;
-                emp.setBaseSalary(raise);
+        for (Employee employee : companyX) {
+            if (employee.getClass() == className) {
+                this.raise = employee.getBaseSalary() * percentRaise;
+                employee.setBaseSalary(raise);
             }
         }
     }
@@ -41,7 +41,7 @@ public class Owner {
         }
 
         public String toString () {
-            return "Owner of CompanyX is : " + name + "\nAvailable? " + availableForMeeting + "\nMotto for the day : " + motto;
+            return "Owner of CompanyX is : " + name + "\nAvailable? " + availableForMeeting + "\nMotto for the day : " + motto + "\n";
         }
 
         public void viewAllEmployees () {
