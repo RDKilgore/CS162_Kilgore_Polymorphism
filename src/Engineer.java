@@ -1,33 +1,33 @@
 public class Engineer extends Employee {
-    private final static double SALARY_MULTIPLIER  = 1.5;
-    private final static int BONUS_MIN  = 5000;
-    private final static int BONUS_MAX  = 10000;
-    private final static int VACATION_MAX  = 3;
-    private final static int VACATION_MIN  = 2;
+    private final static double SALARY_MULTIPLIER = 1.5;
+    private final static int BONUS_MIN = 5000;
+    private final static int BONUS_MAX = 10000;
+    private final static int VACATION_MAX = 3;
+    private final static int VACATION_MIN = 2;
+    protected boolean isEngineer;
 
 
-    public Engineer(){
+    public Engineer() {
         super();
     }
 
-    public Engineer(String name, double  baseSalary, int yearsOfExperience, int yearsAtCompany){
-        super(name, baseSalary*SALARY_MULTIPLIER, yearsOfExperience, yearsAtCompany);
+    public Engineer(String name, double baseSalary, int yearsOfExperience, int yearsAtCompany, String staffedPostition) {
+        super(name, baseSalary * SALARY_MULTIPLIER, yearsOfExperience, yearsAtCompany, staffedPostition);
     }
 
 
-    public int vacationTime(){
-        int vacationTime=0;
-        if(getYearsAtCompany() >= YEARS_AT_COMPANY_MAX_VACATION_THRESHOLD){
-            vacationTime= VACATION_MAX;
-        }
-        else if (getYearsAtCompany() >= YEARS_AT_COMPANY_MIN_VACATION_THRESHOLD){
-            vacationTime= VACATION_MIN;
+    public int vacationTime() {
+        int vacationTime = 0;
+        if (getYearsAtCompany() >= YEARS_AT_COMPANY_MAX_VACATION_THRESHOLD) {
+            vacationTime = VACATION_MAX;
+        } else if (getYearsAtCompany() >= YEARS_AT_COMPANY_MIN_VACATION_THRESHOLD) {
+            vacationTime = VACATION_MIN;
         }
         return vacationTime;
     }
 
-    public int signOnBonus(){
-        if(getYearsOfExperience() < 5)return BONUS_MIN;
+    public int signOnBonus() {
+        if (getYearsOfExperience() < 5) return BONUS_MIN;
         else return BONUS_MAX;
     }
 

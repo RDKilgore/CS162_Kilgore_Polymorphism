@@ -5,8 +5,8 @@ public class TechnicalWriter extends Employee{
     public TechnicalWriter(){
         super();
     }
-    public TechnicalWriter(String name, double  baseSalary, int yearsOfExperience, int yearsAtCompany){
-        super(name, baseSalary, yearsOfExperience, yearsAtCompany);
+    public TechnicalWriter(String name, double  baseSalary, int yearsOfExperience, int yearsAtCompany, String staffedPosition){
+        super(name, baseSalary, yearsOfExperience, yearsAtCompany, staffedPosition);
     }
 
     public int vacationTime(){

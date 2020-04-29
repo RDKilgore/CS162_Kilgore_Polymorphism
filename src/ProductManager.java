@@ -8,8 +8,8 @@ public class ProductManager extends Employee {
     public ProductManager(){
         super();
     }
-    public ProductManager(String name, double  baseSalary, int yearsOfExperience, int yearsAtCompany){
-        super(name, baseSalary*SALARY_MULTIPLIER, yearsOfExperience, yearsAtCompany);
+    public ProductManager(String name, double  baseSalary, int yearsOfExperience, int yearsAtCompany, String staffedPosition){
+        super(name, baseSalary*SALARY_MULTIPLIER, yearsOfExperience, yearsAtCompany, staffedPosition);
     }
 
     public int vacationTime(){

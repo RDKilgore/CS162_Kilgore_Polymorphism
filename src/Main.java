@@ -2,21 +2,15 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        FacilityManager boss = new FacilityManager();
-        boss.setTechnicalWriter("Mark", 50000, 4, 2);
-        boss.setProductManger("April", 50000, 4, 2);
-        boss.setEngineer("Mae", 50000, 4, 2);
-        boss.printAllEmployees();
+        Owner boss = new Owner();
+        boss.addTechnicalWriter("Mark", 50000, 4, 2, "Technical Writer");
+        boss.addProductManger("April", 50000, 4, 2, "Product Manager");
+        boss.addEngineer("Mae", 50000, 4, 2, "Engineer");
+        boss.addProductManger("June", 50000, 4, 2, "Product Manager");
+        boss.giveRaise(Engineer.class, 0.25);
+        boss.giveRaise(TechnicalWriter.class, 0.25);
+        boss.giveRaise(ProductManager.class, 0.25);
+        boss.viewAllEmployees();
     }
 }
-       // companyX.add(new Employee("June", 50000, 4, 2));
-        ;
-//        System.out.println();
-//        Engineer engineer = new Engineer("Natashia", 50000, 7, 2);
-//        System.out.println(engineer.toString());
-//        System.out.println();
-//        ProductManager productManager = new ProductManager("Carlos", 50000, 8, 5);
-//        System.out.println(productManager.toString());
-//        System.out.println();
-
 

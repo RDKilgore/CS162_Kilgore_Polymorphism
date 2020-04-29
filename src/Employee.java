@@ -8,6 +8,7 @@ public class Employee {
     private double baseSalary;
     private int yearsOfExperience;
     private int yearsAtCompany;
+    private String staffedPosition;
     protected final static int YEARS_AT_COMPANY_MAX_VACATION_THRESHOLD  = 2;
     protected final static int YEARS_AT_COMPANY_MIN_VACATION_THRESHOLD  = 1;
 
@@ -15,7 +16,7 @@ public class Employee {
      * Parameterless constructor
      */
     public Employee(){
-        this("", 0,0,0);
+        this("", 0,0,0, "Employee");
     }
 
     /**
@@ -25,14 +26,17 @@ public class Employee {
      *@param yearsOfExperience A variable of type int
      *@param yearsAtCompany A variable of type int
      */
-    public Employee(String name, double baseSalary, int yearsOfExperience, int yearsAtCompany){
+    public Employee(String name, double baseSalary, int yearsOfExperience, int yearsAtCompany, String staffedPosition){
         this.name = name;
         this.baseSalary = baseSalary;
         this.yearsOfExperience = yearsOfExperience;
         this.yearsAtCompany = yearsAtCompany;
+        this.staffedPosition = staffedPosition;
     }
 
     //Accessor methods
+    public String getStaffedPosition(){ return staffedPosition;}
+    public void setStaffedPosition(){ this.staffedPosition = staffedPosition;}
     public String getName() {
         return name;
     }
@@ -72,7 +76,7 @@ public class Employee {
     @Override
     public String toString() {
         return "Employee name: " + name +
-                ", baseSalary: $" + getBaseSalary() +
+                ", baseSalary: $" + getBaseSalary() + " Position: " + staffedPosition +
                 "\nmotto: " + motto();
     }
 
